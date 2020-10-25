@@ -3,8 +3,6 @@ def leadsTo(var, delta):
   for path in delta:
     if path[1] == var:
       aux.add(path[2])
-    else:
-      continue
   return aux
 
 delta = [
