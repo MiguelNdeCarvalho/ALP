@@ -1,19 +1,14 @@
 def alphabetFor(word, sep="_"):
-    alphabet = []
     if sep == "":
         words = list(word)
-        for char in words:
-            if char in alphabet:
-                continue
-            else:
-                alphabet.append(char)
     else:
         words = word.split(sep)
-        for char in words:
-            if char in alphabet:
-                continue
-            else:
-                alphabet.append(char)
+
+    alphabet = []
+
+    for char in words:
+        if char not in alphabet:
+            alphabet.append(char)
     return alphabet
 
 
